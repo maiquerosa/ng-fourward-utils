@@ -1,0 +1,152 @@
+<form [formGroup]="fourwardFormGroup">
+  <div [class]="rowContainerClass">
+    <ng-template ngFor let-field [ngForOf]="fields" let-i="index" let-odd="odd">
+      <div [ngClass]="field.containerClass">
+        <label *ngIf="field.type !== fieldType.CHECKBOX && field.type !== fieldType.INPUTFILE" [for]="field.id">{{
+          field.label
+        }}</label>
+
+        <!-- Para inputs tipo: texto -->
+        <nfu-input-text-mask
+          *ngIf="field.type === fieldType.TEXT"
+          [placeholder]="field.placeholder || ''"
+          [id]="field.id"
+          [type]="field.maskType || 'noFormat'"
+          [name]="field.name"
+          [formControlName]="field.name"
+          [className]="
+            field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid
+              ? field.inputClass + ' is-invalid'
+              : field.inputClass
+          "
+        ></nfu-input-text-mask>
+
+        <!-- Para inputs tipo: autocomplete -->
+
+        <p-autoComplete
+          *ngIf="field.type === fieldType.AUTOCOMPLETE"
+          [field]="field.name"
+          [style]="{ width: '100%' }"
+          [inputStyle]="{ width: '100%' }"
+          [formControlName]="field.name"
+          [placeholder]="field.placeholder || ''"
+          [suggestions]="autoCompleteSugestions"
+          (completeMethod)="autoCompleteMethod.emit($event)"
+        >
+          <ng-template let-item pTemplate="item">
+            <div>
+              <span>{{ item.name }}</span>
+            </div>
+          </ng-template>
+        </p-autoComplete>
+
+        <!-- Para inputs tipo: dropbox -->
+        <select
+          *ngIf="field.type === fieldType.DROPDOWN"
+          [id]="field.id"
+          [formControlName]="field.name"
+          [class]="field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid ? 'is-invalid' : ''"
+          [name]="field.name"
+          [ngClass]="field.inputClass"
+        >
+          <ng-template ngFor let-option [ngForOf]="field.options">
+            <option [value]="option.value">{{ option.key }}</option>
+          </ng-template>
+        </select>
+
+        <!-- Para inputs tipo: textarea -->
+        <textarea
+          *ngIf="field.type === fieldType.TEXTAREA"
+          [placeholder]="field.placeholder || ''"
+          [formControlName]="field.name"
+          [name]="field.name"
+          [id]="field.id"
+          [value]="field.defaultValue"
+          [class]="field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid ? 'is-invalid' : ''"
+          [ngClass]="field.inputClass"
+          cols="30"
+          rows="5"
+        ></textarea>
+
+        <!-- Para inputs tipo: File -->
+        <div
+          class="field.inputClass"
+          *ngIf="field.type === fieldType.INPUTFILE"
+          style="margin-left: 0px;margin-right: 0px"
+        >
+          <label class="col-md-3 col-form-label" [for]="field.id">{{ field.label }}</label>
+          <div class="col-md-9">
+            <input
+              [placeholder]="field.placeholder || ''"
+              [id]="field.id"
+              [name]="field.name"
+              [class]="
+                field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid ? 'is-invalid' : ''
+              "
+              [placeholder]="field.placeholder || ''"
+              [type]="field.type"
+              [value]="
+                field.hasDataPipe ? (field.defaultValue || '' | date: 'dd/MM/yyyy HH:mm') : field.defaultValue || ''
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Para inputs tipo: Checkbox -->
+        <div *ngIf="field.type === fieldType.CHECKBOX" class="form-check form-check-inline">
+          <input
+            [ngClass]="field.inputClass"
+            class="form-check-input"
+            [formControlName]="field.name"
+            id="inline-checkbox1"
+            type="checkbox"
+            [checked]="field.defaultValue"
+            value="true"
+          />
+          <label class="form-check-label" for="inline-checkbox1">{{
+            field.defaultValue ? field.labelTrue : field.labelFalse
+          }}</label>
+        </div>
+
+        <!-- Para inputs tipo: Datepick -->
+        <p-calendar
+          *ngIf="field.type === fieldType.DATEPICKER"
+          [placeholder]="field.placeholder || ''"
+          [id]="field.id"
+          [name]="field.name"
+          [dateFormat]="'dd/mm/yy'"
+          [formControlName]="field.name"
+          [appendTo]="'body'"
+          [styleClass]="field.inputClass"
+          [style]="{ padding: '0', border: 'none' }"
+          [inputStyleClass]="
+            field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid
+              ? 'is-invalid ' + field.inputClass
+              : field.inputClass
+          "
+          [inputStyle]="
+            field.required && isSubmited && fourwardFormGroup.controls[field.name].invalid
+              ? { borderColor: '#dc3545', color: '#808194' }
+              : { borderColor: '#d3d4da', color: '#808194' }
+          "
+        ></p-calendar>
+      </div>
+    </ng-template>
+
+    <div [ngClass]="btnContainerClass">
+      <button *ngIf="actionBtn1Enabled && !isLoading" [ngClass]="actionBtn1Class" (click)="actionButton1Click()">
+        <i [ngClass]="actionBtn1Icon"></i> {{ actionBtn1Label }}
+      </button>
+      <button *ngIf="actionBtn1Enabled && isLoading" type="button" [ngClass]="actionBtn1Class">
+        <i [class]="loadingIndicatorClass"></i>&nbsp;Aguarde...
+      </button>
+
+      <button *ngIf="actionBtn2Enabled" [ngClass]="actionBtn2Class" (click)="actionButton2Click()">
+        <i [ngClass]="actionBtn2Icon"></i> {{ actionBtn2Label }}
+      </button>
+      <button *ngIf="cancelBtnEnabled" type="reset" [ngClass]="cancelBtnClass" (click)="cancelButtonClick()">
+        <i [ngClass]="cancelBtnIcon"></i> {{ cancelBtnLabel }}
+      </button>
+    </div>
+  </div>
+</form>
