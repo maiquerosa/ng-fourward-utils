@@ -7,7 +7,7 @@
         }}</label>
 
         <!-- Para inputs tipo: texto -->
-        <nfu-input-text-mask
+        <nfu-input-mask
           *ngIf="field.type === fieldType.TEXT"
           [placeholder]="field.placeholder || ''"
           [id]="field.id"
@@ -19,7 +19,7 @@
               ? field.inputClass + ' is-invalid'
               : field.inputClass
           "
-        ></nfu-input-text-mask>
+        ></nfu-input-mask>
 
         <!-- Para inputs tipo: autocomplete -->
 

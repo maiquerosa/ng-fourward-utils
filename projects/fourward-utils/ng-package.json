@@ -3,5 +3,6 @@
   "dest": "../../dist/fourward-utils",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["tslib", "angular","primeng"]
 }
