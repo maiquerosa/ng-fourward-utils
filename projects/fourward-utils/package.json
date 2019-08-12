@@ -1,6 +1,6 @@
 {
   "name": "fourward-utils",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "peerDependencies": {
     "@angular/common": "^8.0.3",
     "@angular/core": "^8.0.3",

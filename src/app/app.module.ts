@@ -5,7 +5,7 @@ import { FourwardInputMaskModule, FourwardFormModule } from 'projects/fourward-u
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, FourwardInputMaskModule,FourwardFormModule],
+  imports: [BrowserModule, FourwardInputMaskModule, FourwardFormModule],
   providers: [],
   bootstrap: [AppComponent]
 })
