@@ -52,7 +52,40 @@ module.exports = "<input\n  type=\"text\"\n  [id]=\"id\"\n  [placeholder]=\"plac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<label for=\"\">Seu nome</label>\n<br>\n<nfu-input-mask [type]=\"'text'\" placeholder=\"Texto de exempo\" id=\"nome\" name=\"nome\"></nfu-input-mask>\n\n"
+module.exports = "<div>\n  <nav class=\"navbar fixed-top navbar-expand-lg navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" href=\"#\"><img width=\"200\" src=\"../assets/img/logo.png\" alt=\"\"/></a>\n    <button\n      class=\"navbar-toggler\"\n      type=\"button\"\n      data-toggle=\"collapse\"\n      data-target=\"#navbarSupportedContent\"\n      aria-controls=\"navbarSupportedContent\"\n      aria-expanded=\"false\"\n      aria-label=\"Toggle navigation\"\n    >\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['introduction']\">Introdução <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['instalation']\">Instalação</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a\n            class=\"nav-link dropdown-toggle\"\n            href=\"#\"\n            id=\"navbarDropdown\"\n            role=\"button\"\n            data-toggle=\"dropdown\"\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n          >\n            Documentação\n          </a>\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Componentes</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Serviços</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Diretivas</a>\n            <div class=\"dropdown-divider\"></div>\n            <a class=\"dropdown-item\" href=\"#\">Models</a>\n          </div>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\" />\n        <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n  <main class=\"container bg-white pt-5 mt-5\">\n    <router-outlet></router-outlet>\n  </main>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/introduction/introduction.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/introduction/introduction.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-8\">\n    <h1>Introdução</h1>\n  </div>\n  <div class=\"col-4 pt-4 text-right\">\n    <app-clipboard-input [code]=\"'npm install fourward-utils'\"></app-clipboard-input>\n  </div>\n</div>\n\n<hr />\n\n<p>\n  Visando o desenvolvimento dinâmico e continuo, criamos esta biblioteca de componentes baseado em angular. Estes\n  componentes são comumente utilizados nos projetos da empresa e agora estamos liberando os mesmos para a comunidade, de\n  modo que venha ajudar no desenvolvimento agil e diminuir trabalho codificando componentes que já estão prontos e\n  testados.\n</p>\n\n<hr class=\"hr-light\" />\n\n<h2>Índice</h2>\n\n<div class=\"row\">\n  <div class=\"col-sm-12 col-md-4\">\n    <p-panelMenu [model]=\"items\"></p-panelMenu>\n  </div>\n  <div class=\"col-sm-12 col-md-8\">\n    <h2>Biblioteca open source</h2>\n    <p>\n      É possível que você não encontre o componente que precisa, neste caso basta solicitar a criação uma solicitação\n      nas issues no github ou você pode também colaborar com o pacote criando um fork do projeto e desenvolvendo seu\n      própio componente e enviar um PR para adicionar o seu novo componente a lib.\n    </p>\n    <hr />\n\n    <h3>Github do projeto</h3>\n    <a href=\"https://github.com/maiquerosa/ng-fourward-utils\" target=\"_blank\">@maiquerosa/ng-fourward-utils</a>\n    <span class=\"badge badge-primary d-inline-block ml-2\">Versão 0.0.3</span>\n    <br />\n    <br />\n    <h4>\n      Siga este modelo para abertura de issue:\n    </h4>\n    <div class=\"bg-light p-3\">\n      <code>Qual a versão da lib esta utilizando?</code>\n      <p>\n        <em>Nesta sessão você pode postar seu</em> <mark>package.json</mark>\n        <em>ou informar as versões das libs que está usando</em>\n      </p>\n\n      <code>Qual o comportamento que esta enfretando?</code>\n      <p><em>Nesta sessão você pode detalhar o problema que esta enfrentando ao usar a lib</em></p>\n\n      <code>Quais os componentes está utilizando?</code>\n      <p><em>Informe nesta sessão quais os componentes da lib que você esta fazendo uso quando o problema ocorre.</em></p>\n\n      <code>Qual o comportamento esperado?</code>\n      <p><em>Informe brevemente nesta sessão qual o comportamento que você julga ser o correto.</em></p>\n    </div>\n\n    <p> Acesse este <a href=\"#\">link para abertura de chamado</a></p>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/reuse-component/clipboard-input/clipboard-input.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/reuse-component/clipboard-input/clipboard-input.component.html ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"input-group\">\n  <input type=\"text\" class=\"form-control bg-white text-primary\" disabled [id]=\"elementId\" [value]=\"code\" />\n  <div class=\"input-group-append\">\n    <span class=\"input-group-text\"\n      ><i title=\"Copiar\" (click)=\"copyCommand('install-code')\" class=\"text-right far fa-copy fa-lg icon-copy\"></i>\n      <small class=\"cliped-success\" [ngClass]=\"{ copied: installCommandCopied }\">Conteúdo copiado!</small>\n    </span>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/reuse-component/inner-code/inner-code.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/reuse-component/inner-code/inner-code.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div [class]=\"containerClass\">\n  <pre>\n              <code [class]=\"innerCodeClass\"  [innerHTML]=\"innerCode\">\n              </code>\n            </pre>\n</div>\n"
 
 /***/ }),
 
@@ -775,6 +808,56 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
+
+
+
+
+var routes = [
+    {
+        path: '',
+        redirectTo: 'introduction',
+        pathMatch: 'full'
+    },
+    {
+        path: 'introduction',
+        component: _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_3__["IntroductionComponent"]
+    },
+    {
+        path: 'instalation',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | instalation-instalation-module */ "instalation-instalation-module").then(__webpack_require__.bind(null, /*! ./instalation/instalation.module */ "./src/app/instalation/instalation.module.ts")).then(function (m) { return m.InstalationModule; }); }
+    }
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+            declarations: []
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.css":
 /*!***********************************!*\
   !*** ./src/app/app.component.css ***!
@@ -830,9 +913,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/fourward-utils/src/public-api */ "./projects/fourward-utils/src/public-api.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! projects/fourward-utils/src/public-api */ "./projects/fourward-utils/src/public-api.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
+/* harmony import */ var primeng_panelmenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/panelmenu */ "./node_modules/primeng/panelmenu.js");
+/* harmony import */ var primeng_panelmenu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(primeng_panelmenu__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _reuse_component_reuse_component_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./reuse-component/reuse-component.module */ "./src/app/reuse-component/reuse-component.module.ts");
+
+
+
+
+
 
 
 
@@ -842,14 +936,279 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_4__["FourwardInputMaskModule"], projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_4__["FourwardFormModule"]],
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_7__["IntroductionComponent"]],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
+                projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_5__["FourwardInputMaskModule"],
+                projects_fourward_utils_src_public_api__WEBPACK_IMPORTED_MODULE_5__["FourwardFormModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                primeng_panelmenu__WEBPACK_IMPORTED_MODULE_8__["PanelMenuModule"],
+                _reuse_component_reuse_component_module__WEBPACK_IMPORTED_MODULE_9__["ReuseComponentModule"]
+            ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/introduction/introduction.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/introduction/introduction.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ludHJvZHVjdGlvbi9pbnRyb2R1Y3Rpb24uY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/introduction/introduction.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/introduction/introduction.component.ts ***!
+  \********************************************************/
+/*! exports provided: IntroductionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntroductionComponent", function() { return IntroductionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var IntroductionComponent = /** @class */ (function () {
+    function IntroductionComponent() {
+        this.items = [];
+    }
+    IntroductionComponent.prototype.ngOnInit = function () {
+        this.items = [
+            {
+                label: 'Instalação',
+                icon: 'pi pi-pw pi-cog',
+                routerLink: ['/instalation']
+            },
+            {
+                label: 'Componentes',
+                items: [
+                    {
+                        label: 'nfu-form',
+                        routerLink: '#'
+                    },
+                    {
+                        label: 'nfu-table',
+                        routerLink: '#'
+                    },
+                    {
+                        label: 'nfu-input-text-mask',
+                        routerLink: '#'
+                    }
+                ]
+            },
+            {
+                label: 'Serviços',
+                items: [
+                    {
+                        label: 'FourwardFormService',
+                        routerLink: '#'
+                    }
+                ]
+            },
+            {
+                label: 'Diretivas',
+                items: [
+                    {
+                        label: 'Em desenvolvimento',
+                        routerLink: '#'
+                    }
+                ]
+            },
+            {
+                label: 'Models',
+                items: [
+                    {
+                        label: 'Em desenvolvimento',
+                        routerLink: '#'
+                    }
+                ]
+            }
+        ];
+    };
+    IntroductionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-introduction',
+            template: __webpack_require__(/*! raw-loader!./introduction.component.html */ "./node_modules/raw-loader/index.js!./src/app/introduction/introduction.component.html"),
+            styles: [__webpack_require__(/*! ./introduction.component.scss */ "./src/app/introduction/introduction.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], IntroductionComponent);
+    return IntroductionComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/reuse-component/clipboard-input/clipboard-input.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/app/reuse-component/clipboard-input/clipboard-input.component.scss ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".icon-copy {\n  -webkit-transform: transform 1ms ease-out;\n          transform: transform 1ms ease-out;\n  width: 100%;\n  z-index: 999;\n}\n\n.icon-copy:hover {\n  -webkit-transform: scale(1.1);\n          transform: scale(1.1);\n}\n\n.input-group-text {\n  cursor: pointer;\n  position: relative;\n}\n\n.cliped-success {\n  position: absolute;\n  left: -70px;\n  bottom: 5px;\n  font-size: 0.8em;\n  opacity: 0;\n}\n\n.copied {\n  -webkit-animation: copied 2s ease-out backwards;\n          animation: copied 2s ease-out backwards;\n}\n\n@-webkit-keyframes copied {\n  100% {\n    z-index: 99999;\n    -webkit-transform: translateY(40px);\n            transform: translateY(40px);\n    opacity: 1;\n  }\n}\n\n@keyframes copied {\n  100% {\n    z-index: 99999;\n    -webkit-transform: translateY(40px);\n            transform: translateY(40px);\n    opacity: 1;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RyYXZpcy9idWlsZC9tYWlxdWVyb3NhL25nLWZvdXJ3YXJkLXV0aWxzL3NyYy9hcHAvcmV1c2UtY29tcG9uZW50L2NsaXBib2FyZC1pbnB1dC9jbGlwYm9hcmQtaW5wdXQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3JldXNlLWNvbXBvbmVudC9jbGlwYm9hcmQtaW5wdXQvY2xpcGJvYXJkLWlucHV0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUNBQUE7VUFBQSxpQ0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDQ0Y7O0FERUE7RUFDRSw2QkFBQTtVQUFBLHFCQUFBO0FDQ0Y7O0FERUE7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7QUNDRjs7QURFQTtFQUNFLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLFVBQUE7QUNDRjs7QURFQTtFQUNFLCtDQUFBO1VBQUEsdUNBQUE7QUNDRjs7QURFQTtFQUNFO0lBQ0UsY0FBQTtJQUNBLG1DQUFBO1lBQUEsMkJBQUE7SUFDQSxVQUFBO0VDQ0Y7QUFDRjs7QUROQTtFQUNFO0lBQ0UsY0FBQTtJQUNBLG1DQUFBO1lBQUEsMkJBQUE7SUFDQSxVQUFBO0VDQ0Y7QUFDRiIsImZpbGUiOiJzcmMvYXBwL3JldXNlLWNvbXBvbmVudC9jbGlwYm9hcmQtaW5wdXQvY2xpcGJvYXJkLWlucHV0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmljb24tY29weSB7XG4gIHRyYW5zZm9ybTogdHJhbnNmb3JtIDFtcyBlYXNlLW91dDtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDk5OTtcbn1cblxuLmljb24tY29weTpob3ZlciB7XG4gIHRyYW5zZm9ybTogc2NhbGUoMS4xKTtcbn1cblxuLmlucHV0LWdyb3VwLXRleHQge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmNsaXBlZC1zdWNjZXNzIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAtNzBweDtcbiAgYm90dG9tOiA1cHg7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIG9wYWNpdHk6IDA7XG59XG5cbi5jb3BpZWQge1xuICBhbmltYXRpb246IGNvcGllZCAycyBlYXNlLW91dCBiYWNrd2FyZHM7XG59XG5cbkBrZXlmcmFtZXMgY29waWVkIHtcbiAgMTAwJSB7XG4gICAgei1pbmRleDogOTk5OTk7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDQwcHgpO1xuICAgIG9wYWNpdHk6IDE7XG4gIH1cbn1cbiIsIi5pY29uLWNvcHkge1xuICB0cmFuc2Zvcm06IHRyYW5zZm9ybSAxbXMgZWFzZS1vdXQ7XG4gIHdpZHRoOiAxMDAlO1xuICB6LWluZGV4OiA5OTk7XG59XG5cbi5pY29uLWNvcHk6aG92ZXIge1xuICB0cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG59XG5cbi5pbnB1dC1ncm91cC10ZXh0IHtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5jbGlwZWQtc3VjY2VzcyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogLTcwcHg7XG4gIGJvdHRvbTogNXB4O1xuICBmb250LXNpemU6IDAuOGVtO1xuICBvcGFjaXR5OiAwO1xufVxuXG4uY29waWVkIHtcbiAgYW5pbWF0aW9uOiBjb3BpZWQgMnMgZWFzZS1vdXQgYmFja3dhcmRzO1xufVxuXG5Aa2V5ZnJhbWVzIGNvcGllZCB7XG4gIDEwMCUge1xuICAgIHotaW5kZXg6IDk5OTk5O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg0MHB4KTtcbiAgICBvcGFjaXR5OiAxO1xuICB9XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/reuse-component/clipboard-input/clipboard-input.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/reuse-component/clipboard-input/clipboard-input.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: ClipboardInputComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClipboardInputComponent", function() { return ClipboardInputComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ClipboardInputComponent = /** @class */ (function () {
+    function ClipboardInputComponent() {
+        this.elementId = 'cliped-input';
+        this.installCommandCopied = false;
+    }
+    ClipboardInputComponent.prototype.ngOnInit = function () { };
+    ClipboardInputComponent.prototype.copyCommand = function () {
+        var _this = this;
+        var el = document.getElementById(this.elementId);
+        el.disabled = false;
+        el.select();
+        el.disabled = true;
+        document.execCommand('copy');
+        this.installCommandCopied = true;
+        setTimeout(function () {
+            _this.installCommandCopied = false;
+        }, 3000);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], ClipboardInputComponent.prototype, "code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], ClipboardInputComponent.prototype, "elementId", void 0);
+    ClipboardInputComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-clipboard-input',
+            template: __webpack_require__(/*! raw-loader!./clipboard-input.component.html */ "./node_modules/raw-loader/index.js!./src/app/reuse-component/clipboard-input/clipboard-input.component.html"),
+            styles: [__webpack_require__(/*! ./clipboard-input.component.scss */ "./src/app/reuse-component/clipboard-input/clipboard-input.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ClipboardInputComponent);
+    return ClipboardInputComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/reuse-component/inner-code/inner-code.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/reuse-component/inner-code/inner-code.component.scss ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JldXNlLWNvbXBvbmVudC9pbm5lci1jb2RlL2lubmVyLWNvZGUuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/reuse-component/inner-code/inner-code.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/reuse-component/inner-code/inner-code.component.ts ***!
+  \********************************************************************/
+/*! exports provided: InnerCodeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InnerCodeComponent", function() { return InnerCodeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var InnerCodeComponent = /** @class */ (function () {
+    function InnerCodeComponent() {
+        this.innerCodeClass = 'text-warning';
+    }
+    InnerCodeComponent.prototype.ngOnInit = function () { };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], InnerCodeComponent.prototype, "containerClass", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], InnerCodeComponent.prototype, "innerCodeClass", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], InnerCodeComponent.prototype, "innerCode", void 0);
+    InnerCodeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-inner-code',
+            template: __webpack_require__(/*! raw-loader!./inner-code.component.html */ "./node_modules/raw-loader/index.js!./src/app/reuse-component/inner-code/inner-code.component.html"),
+            styles: [__webpack_require__(/*! ./inner-code.component.scss */ "./src/app/reuse-component/inner-code/inner-code.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], InnerCodeComponent);
+    return InnerCodeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/reuse-component/reuse-component.module.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/reuse-component/reuse-component.module.ts ***!
+  \***********************************************************/
+/*! exports provided: ReuseComponentModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReuseComponentModule", function() { return ReuseComponentModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _clipboard_input_clipboard_input_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./clipboard-input/clipboard-input.component */ "./src/app/reuse-component/clipboard-input/clipboard-input.component.ts");
+/* harmony import */ var _inner_code_inner_code_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inner-code/inner-code.component */ "./src/app/reuse-component/inner-code/inner-code.component.ts");
+
+
+
+
+
+var ReuseComponentModule = /** @class */ (function () {
+    function ReuseComponentModule() {
+    }
+    ReuseComponentModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_clipboard_input_clipboard_input_component__WEBPACK_IMPORTED_MODULE_3__["ClipboardInputComponent"], _inner_code_inner_code_component__WEBPACK_IMPORTED_MODULE_4__["InnerCodeComponent"]],
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
+            exports: [_clipboard_input_clipboard_input_component__WEBPACK_IMPORTED_MODULE_3__["ClipboardInputComponent"], _inner_code_inner_code_component__WEBPACK_IMPORTED_MODULE_4__["InnerCodeComponent"]]
+        })
+    ], ReuseComponentModule);
+    return ReuseComponentModule;
 }());
 
 
