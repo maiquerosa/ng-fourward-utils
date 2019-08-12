@@ -1,0 +1,9 @@
+<div class="input-group">
+  <input type="text" class="form-control bg-white text-primary" disabled [id]="elementId" [value]="code" />
+  <div class="input-group-append">
+    <span class="input-group-text"
+      ><i title="Copiar" (click)="copyCommand('install-code')" class="text-right far fa-copy fa-lg icon-copy"></i>
+      <small class="cliped-success" [ngClass]="{ copied: installCommandCopied }">Conteúdo copiado!</small>
+    </span>
+  </div>
+</div>

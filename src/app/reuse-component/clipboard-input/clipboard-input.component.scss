@@ -1,0 +1,34 @@
+.icon-copy {
+  transform: transform 1ms ease-out;
+  width: 100%;
+  z-index: 999;
+}
+
+.icon-copy:hover {
+  transform: scale(1.1);
+}
+
+.input-group-text {
+  cursor: pointer;
+  position: relative;
+}
+
+.cliped-success {
+  position: absolute;
+  left: -70px;
+  bottom: 5px;
+  font-size: 0.8em;
+  opacity: 0;
+}
+
+.copied {
+  animation: copied 2s ease-out backwards;
+}
+
+@keyframes copied {
+  100% {
+    z-index: 99999;
+    transform: translateY(40px);
+    opacity: 1;
+  }
+}

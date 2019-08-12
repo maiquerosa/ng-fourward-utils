@@ -28,7 +28,7 @@
       "commit-msg": "commitlint --edit"
     }
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.0.0",
     "@angular/common": "~8.0.0",
@@ -38,6 +38,11 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "primeicons": "^2.0.0",
     "primeng": "^8.0.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
@@ -77,5 +82,25 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "description": "[![Build Status](https://travis-ci.com/maiquerosa/ng-fourward-utils.svg?branch=master)](https://travis-ci.com/maiquerosa/ng-fourward-utils)\r [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)\r [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiquerosa/ng-fourward-utils.git"
+  },
+  "keywords": [
+    "open",
+    "source",
+    "angular",
+    "4ward",
+    "fourward",
+    "projects",
+    "payments"
+  ],
+  "author": "Maique Rosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiquerosa/ng-fourward-utils/issues"
+  },
+  "homepage": "https://github.com/maiquerosa/ng-fourward-utils#readme"
 }
