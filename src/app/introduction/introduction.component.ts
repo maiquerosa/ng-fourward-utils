@@ -22,7 +22,7 @@ export class IntroductionComponent implements OnInit {
         items: [
           {
             label: 'nfu-form',
-            routerLink: '#'
+            routerLink: '/documentation'
           },
           {
             label: 'nfu-table',
