@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /",
+    "build": "ng build --base-href /ng-fourward-utils/",
     "build-lib": "ng build fourward-utils",
     "test": "ng test",
     "lint": "ng lint",
