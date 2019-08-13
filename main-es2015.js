@@ -823,6 +823,10 @@ const routes = [
     {
         path: 'instalation',
         loadChildren: () => __webpack_require__.e(/*! import() | instalation-instalation-module */ "instalation-instalation-module").then(__webpack_require__.bind(null, /*! ./instalation/instalation.module */ "./src/app/instalation/instalation.module.ts")).then(m => m.InstalationModule)
+    },
+    {
+        path: 'documentation',
+        loadChildren: () => __webpack_require__.e(/*! import() | documentation-documentation-module */ "documentation-documentation-module").then(__webpack_require__.bind(null, /*! ./documentation/documentation.module */ "./src/app/documentation/documentation.module.ts")).then(m => m.DocumentationModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -976,7 +980,7 @@ let IntroductionComponent = class IntroductionComponent {
                 items: [
                     {
                         label: 'nfu-form',
-                        routerLink: '#'
+                        routerLink: '/documentation'
                     },
                     {
                         label: 'nfu-table',

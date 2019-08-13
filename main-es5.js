@@ -839,6 +839,10 @@ var routes = [
     {
         path: 'instalation',
         loadChildren: function () { return __webpack_require__.e(/*! import() | instalation-instalation-module */ "instalation-instalation-module").then(__webpack_require__.bind(null, /*! ./instalation/instalation.module */ "./src/app/instalation/instalation.module.ts")).then(function (m) { return m.InstalationModule; }); }
+    },
+    {
+        path: 'documentation',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | documentation-documentation-module */ "documentation-documentation-module").then(__webpack_require__.bind(null, /*! ./documentation/documentation.module */ "./src/app/documentation/documentation.module.ts")).then(function (m) { return m.DocumentationModule; }); }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -999,7 +1003,7 @@ var IntroductionComponent = /** @class */ (function () {
                 items: [
                     {
                         label: 'nfu-form',
-                        routerLink: '#'
+                        routerLink: '/documentation'
                     },
                     {
                         label: 'nfu-table',
